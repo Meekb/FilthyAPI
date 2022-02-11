@@ -50,10 +50,6 @@ articles.forEach(site => {
     })
 })
 ```
-
-## Learning
-This was just a quick tu
- 
 ## Endpoints
 API home: (https://john-waters-api.herokuapp.com/)
 
