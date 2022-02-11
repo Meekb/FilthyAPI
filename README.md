@@ -20,7 +20,8 @@ tags that contain "John Waters":
   1. Clone this project
   2. ```cd``` into the project from your terminal
   3. ```npm i``` to install dependencies
-  4. ```npm start``` to run localhost
+  4. ```npm start``` to start local server
+  5. Open browser to ```localhost:8000```
   
 ```node
 //Here, we run through our articles array and forEach site, we establish a cheerio variable and scrape
