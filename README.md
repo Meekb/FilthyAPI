@@ -1,22 +1,24 @@
 # FilthyAPI
-A collection of articles by and about cult filmmaker and King of Filth, John Waters
-
-Built with the help of developer GODDESS [Ania Kubow](https://github.com/kubowania) 
-  * YouTube walkthrough (https://youtu.be/GK4Pl-GmPHk)
+A collection of articles about cult filmmaker and King of Filth, John Waters
 
 ## Overview
 Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape several websites for ```<a>``` 
-tags that contain "John Waters": 
-  * [The New York Times](https://www.nytimes.com/)
+tags that contain "John Waters":
+  * [The Advocate](https://www.advocate.com/)
+  * [Baltimore Magazine](https://www.baltimoremagazine.com/)
+  * [Baltimore Sun](https://www.baltimoresun.com/)
+  * [GO Magazine](http://gomag.com/)
   * [IndieWire](https://www.indiewire.com/)
+  * [The New York Times](https://www.nytimes.com/)
+  * [Out](https://www.out.com/)
   * [them.](https://www.them.us/)
-  * [Town and Country](https://www.townandcountrymag.com/)  
   
 ## Instructions
   1. Clone this project
   2. ```cd``` into the project from your terminal
   3. ```npm i``` to install dependencies
-  4. ```npm start``` to run localhost
+  4. ```npm start``` to start local server
+  5. Open browser to ```localhost:8000```
   
 ```node
 //Here, we run through our articles array and forEach site, we establish a cheerio variable and scrape
@@ -50,19 +52,52 @@ articles.forEach(site => {
     })
 })
 ```
-## Endpoints
-API home: (https://john-waters-api.herokuapp.com/)
+## Endpoint Code Snippets
+- GET all articles
+```node
+var axios = require("axios").default;
 
-Articles: (https://john-waters-api.herokuapp.com/articles)
+var options = {
+  method: 'GET',
+  url: 'https://filthyapi.p.rapidapi.com/articles',
+  headers: {
+    'x-rapidapi-host': 'filthyapi.p.rapidapi.com',
+    'x-rapidapi-key': '07c49e7131msh1df335cef06dbe8p1c0393jsn50aa8ba72cbf'
+  }
+};
 
-Articles from specifies source: https://john-waters-api.herokuapp.com/articles/${source_name}
- - (https://john-waters-api.herokuapp.com/articles/nytimes)
- - (https://john-waters-api.herokuapp.com/articles/indiewire)
- - (https://john-waters-api.herokuapp.com/articles/them)
- - (https://john-waters-api.herokuapp.com/articles/townandcountry)
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+```
 
-## Deployed on Heroku
+- GET article by specific source
+```node
+var axios = require("axios").default;
+
+var options = {
+  method: 'GET',
+  url: 'https://filthyapi.p.rapidapi.com/articles/theadvocate',
+  headers: {
+    'x-rapidapi-host': 'filthyapi.p.rapidapi.com',
+    'x-rapidapi-key': '07c49e7131msh1df335cef06dbe8p1c0393jsn50aa8ba72cbf'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+```
+
+## Project Deployed on Heroku
 [King of Filth API](https://john-waters-api.herokuapp.com/)
+
+## API 
+[RapidAPI](https://rapidapi.com/bethm.meeker/api/filthyapi/)
 
 ## Tech Stack
 <table>
@@ -83,6 +118,9 @@ Articles from specifies source: https://john-waters-api.herokuapp.com/articles/$
 </table>
 
 ## Contributors
+Built with the help of developer GODDESS [Ania Kubow](https://github.com/kubowania) 
+  * YouTube walkthrough (https://youtu.be/GK4Pl-GmPHk)
+
 <table>
   <tr>
    <td> Beth Meeker <a href="https://github.com/meekb">GH</td>
