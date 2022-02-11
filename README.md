@@ -1,5 +1,5 @@
 # FilthyAPI
-A collection of articles by and about cult filmmaker and King of Filth, John Waters
+A collection of articles about cult filmmaker and King of Filth, John Waters
 
 Built with the help of developer GODDESS [Ania Kubow](https://github.com/kubowania) 
   * YouTube walkthrough (https://youtu.be/GK4Pl-GmPHk)
