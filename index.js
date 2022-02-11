@@ -53,6 +53,7 @@ app.get('/', (req, res) =>  {
   res.json('Welcome to the King of Filth API!')
 })
 
+// get all articles
 articles.forEach(site => {
   axios.get(site.address)
     .then((response) => {
@@ -62,10 +63,10 @@ articles.forEach(site => {
       $('a:contains("<em>John Waters</em>")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount')) {
+        if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && !title.includes('Accessories') && !title.includes('mediamax-width') && url) {
           media.push({
             title,
-            url,
+            url: site.base ? site.base + url : url,
             source: site.name
           })
         }
@@ -74,12 +75,13 @@ articles.forEach(site => {
       $('a:contains("John Waters")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        media.push({
-          title,
-          url: site.base ? site.base + url : url,
-          source: site.name,
-          test: 'TEST!!!!'
-        })
+        if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && url && title.length < 300 && url.length < 300) {
+          media.push({
+            title,
+            url: site.base ? site.base + url : url,
+            source: site.name
+          })
+        }
       })
     })
 })
@@ -89,6 +91,7 @@ app.get('/articles', (req, res) => {
   res.json(media)
 })
 
+// get articles by specific source
 app.get('/articles/:articleId', (req, res) => {
   const articleId = req.params.articleId
   const articleAddress = articles.filter(article => article.name == articleId)[0].address
