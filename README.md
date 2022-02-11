@@ -6,11 +6,15 @@ Built with the help of developer GODDESS [Ania Kubow](https://github.com/kubowan
 
 ## Overview
 Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape several websites for ```<a>``` 
-tags that contain "John Waters": 
-  * [The New York Times](https://www.nytimes.com/)
+tags that contain "John Waters":
+  * [The Advocate](https://www.advocate.com/)
+  * [Baltimore Magazine](https://www.baltimoremagazine.com/)
+  * [Baltimore Sun](https://www.baltimoresun.com/)
+  * [GO Magazine](http://gomag.com/)
   * [IndieWire](https://www.indiewire.com/)
+  * [The New York Times](https://www.nytimes.com/)
+  * [Out](https://www.out.com/)
   * [them.](https://www.them.us/)
-  * [Town and Country](https://www.townandcountrymag.com/)  
   
 ## Instructions
   1. Clone this project
