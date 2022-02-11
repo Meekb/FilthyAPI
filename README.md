@@ -1,9 +1,6 @@
 # FilthyAPI
 A collection of articles about cult filmmaker and King of Filth, John Waters
 
-Built with the help of developer GODDESS [Ania Kubow](https://github.com/kubowania) 
-  * YouTube walkthrough (https://youtu.be/GK4Pl-GmPHk)
-
 ## Overview
 Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape several websites for ```<a>``` 
 tags that contain "John Waters":
@@ -121,6 +118,9 @@ axios.request(options).then(function (response) {
 </table>
 
 ## Contributors
+Built with the help of developer GODDESS [Ania Kubow](https://github.com/kubowania) 
+  * YouTube walkthrough (https://youtu.be/GK4Pl-GmPHk)
+
 <table>
   <tr>
    <td> Beth Meeker <a href="https://github.com/meekb">GH</td>
