@@ -39,7 +39,7 @@ articles.forEach(site => {
       $('a:contains("<em>John Waters</em>")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        if (title !== "" && title !== "_" && title !== "acontains") {
+        if (title !== "" && title !== "_") {
           media.push({
             title,
             url: site.address,
