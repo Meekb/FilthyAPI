@@ -13,11 +13,6 @@ const articles = [
     base: 'https://www.nytimes.com'
   },
   {
-    name: 'townandcountry',
-    address: 'https://www.townandcountrymag.com/search/?q=john+waters',
-    base: 'https://www.townandcountrymag.com'
-  },
-  {
     name: 'indiewire',
     address: 'https://www.indiewire.com/results/#?q=john%20waters',
     base: 'https://www.indiewire.com'
@@ -44,11 +39,13 @@ articles.forEach(site => {
       $('a:contains("<em>John Waters</em>")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        media.push({
-          title,
-          url: site.address,
-          source: site.name
-        })
+        if (title !== "" && title !== "_" && title !== "acontains") {
+          media.push({
+            title,
+            url: site.address,
+            source: site.name
+          })
+        }
       })
        
       $('a:contains("John Waters")', html).each(function() {
