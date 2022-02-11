@@ -18,6 +18,11 @@ const articles = [
     base: 'https://www.indiewire.com'
   },
   {
+    name: 'outmagazine',
+    address: 'https://www.out.com/search/site/john%20waters',
+    base: 'https://www.out.com/'
+  },
+  {
     name: 'them',
     address: 'https://www.them.us/search?q=JOHN+WATERS&sort=score+desc',
     base: 'https://www.them.us'
