@@ -54,19 +54,52 @@ articles.forEach(site => {
     })
 })
 ```
-## Endpoints
-API home: (https://john-waters-api.herokuapp.com/)
+## Endpoint Code Snippets
+- GET all articles
+```node
+var axios = require("axios").default;
 
-Articles: (https://john-waters-api.herokuapp.com/articles)
+var options = {
+  method: 'GET',
+  url: 'https://filthyapi.p.rapidapi.com/articles',
+  headers: {
+    'x-rapidapi-host': 'filthyapi.p.rapidapi.com',
+    'x-rapidapi-key': '07c49e7131msh1df335cef06dbe8p1c0393jsn50aa8ba72cbf'
+  }
+};
 
-Articles from specifies source: https://john-waters-api.herokuapp.com/articles/${source_name}
- - (https://john-waters-api.herokuapp.com/articles/nytimes)
- - (https://john-waters-api.herokuapp.com/articles/indiewire)
- - (https://john-waters-api.herokuapp.com/articles/them)
- - (https://john-waters-api.herokuapp.com/articles/townandcountry)
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+```
 
-## Deployed on Heroku
+- GET article by specific source
+```node
+var axios = require("axios").default;
+
+var options = {
+  method: 'GET',
+  url: 'https://filthyapi.p.rapidapi.com/articles',
+  headers: {
+    'x-rapidapi-host': 'filthyapi.p.rapidapi.com',
+    'x-rapidapi-key': '07c49e7131msh1df335cef06dbe8p1c0393jsn50aa8ba72cbf'
+  }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
+```
+
+## Project Deployed on Heroku
 [King of Filth API](https://john-waters-api.herokuapp.com/)
+
+## API 
+[RapidAPI](https://rapidapi.com/bethm.meeker/api/filthyapi/)
 
 ## Tech Stack
 <table>
