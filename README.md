@@ -61,7 +61,8 @@ var options = {
   method: 'GET',
   url: 'https://filthyapi.p.rapidapi.com/articles',
   headers: {
-    'x-rapidapi-host': 'filthyapi.p.rapidapi.com'
+    'x-rapidapi-host': 'filthyapi.p.rapidapi.com',
+    'x-rapidapi-key': '07c49e7131msh1df335cef06dbe8p1c0393jsn50aa8ba72cbf'
   }
 };
 
@@ -78,9 +79,10 @@ var axios = require("axios").default;
 
 var options = {
   method: 'GET',
-  url: 'https://filthyapi.p.rapidapi.com/articles',
+  url: 'https://filthyapi.p.rapidapi.com/articles/theadvocate',
   headers: {
-    'x-rapidapi-host': 'filthyapi.p.rapidapi.com'
+    'x-rapidapi-host': 'filthyapi.p.rapidapi.com',
+    'x-rapidapi-key': '07c49e7131msh1df335cef06dbe8p1c0393jsn50aa8ba72cbf'
   }
 };
 
