@@ -37,7 +37,7 @@ articles.forEach(site => {
           source: site.name
         })
       })
-       // looking for anchor tags that contain "John Waters" within emphasis tags
+       // looking for anchor tags that contain "John Waters"
       $('a:contains("John Waters")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
