@@ -13,14 +13,34 @@ const articles = [
     base: 'https://www.nytimes.com'
   },
   {
-    name: 'indiewire',
-    address: 'https://www.indiewire.com/results/#?q=john%20waters',
-    base: 'https://www.indiewire.com'
-  },
-  {
     name: 'outmagazine',
     address: 'https://www.out.com/search/site/john%20waters',
     base: 'https://www.out.com/'
+  },
+  {
+    name: 'theadvocate',
+    address: 'https://www.advocate.com/search/site/john%20waters',
+    base: 'https://www.advocate.com/'
+  },
+  {
+    name: 'gomagazine',
+    address: 'http://gomag.com/?s=john+waters',
+    base: 'https://www.gomag.com/'
+  },
+  {
+    name: 'baltimoremagazine',
+    address: 'https://www.baltimoremagazine.com/?s=john+waters',
+    base: 'https://www.baltimoremagazine.com/'
+  },
+  {
+    name: 'baltimoresun',
+    address: 'https://baltimoresun.search.yahoo.com/search?p=john+waters',
+    base: 'https://www.baltimoresun.com/'
+  },
+  {
+    name: 'indiewire',
+    address: 'https://www.indiewire.com/results/#?q=john%20waters',
+    base: 'https://www.indiewire.com'
   },
   {
     name: 'them',
