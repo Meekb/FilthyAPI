@@ -18,6 +18,11 @@ const articles = [
     base: 'https://www.townandcountrymag.com'
   },
   {
+    name: 'indiewire',
+    address: 'https://www.indiewire.com/results/#?q=john%20waters',
+    base: 'https://www.indiewire.com'
+  },
+  {
     name: 'them',
     address: 'https://www.them.us/search?q=JOHN+WATERS&sort=score+desc',
     base: 'https://www.them.us'
@@ -36,6 +41,16 @@ articles.forEach(site => {
       const html = response.data
       const $ = cheerio.load(html)
 
+      $('a:contains("<em>John Waters</em>")', html).each(function() {
+        const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
+        const url = $(this).attr('href')
+        media.push({
+          title,
+          url: site.address,
+          source: site.name
+        })
+      })
+       
       $('a:contains("John Waters")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
