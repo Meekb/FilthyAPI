@@ -54,6 +54,20 @@ articles.forEach(site => {
 ## Learning
 This was just a quick tu
  
+## Endpoints
+API home: (https://john-waters-api.herokuapp.com/)
+
+Articles: (https://john-waters-api.herokuapp.com/articles)
+
+Articles from specifies source: https://john-waters-api.herokuapp.com/articles/${source_name}
+ - (https://john-waters-api.herokuapp.com/articles/nytimes)
+ - (https://john-waters-api.herokuapp.com/articles/indiewire)
+ - (https://john-waters-api.herokuapp.com/articles/them)
+ - (https://john-waters-api.herokuapp.com/articles/townandcountry)
+
+## Deployed on Heroku
+[King of Filth API](https://john-waters-api.herokuapp.com/)
+
 ## Tech Stack
 <table>
   <tr>
@@ -71,20 +85,6 @@ This was just a quick tu
     <td><img width="55" src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/heroku.svg"/></td>
   </tr>
 </table>
-
-## Endpoints
-API home: (https://john-waters-api.herokuapp.com/)
-
-Articles: (https://john-waters-api.herokuapp.com/articles)
-
-Articles from specifies source: https://john-waters-api.herokuapp.com/articles/${source_name}
- - (https://john-waters-api.herokuapp.com/articles/nytimes)
- - (https://john-waters-api.herokuapp.com/articles/indiewire)
- - (https://john-waters-api.herokuapp.com/articles/them)
- - (https://john-waters-api.herokuapp.com/articles/townandcountry)
-
-## Deployed on Heroku
-[King of Filth API](https://john-waters-api.herokuapp.com/)
 
 ## Contributors
 <table>
