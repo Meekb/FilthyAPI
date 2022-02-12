@@ -2,7 +2,7 @@
 A collection of articles about cult filmmaker and King of Filth, John Waters
 
 ## Overview
-Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape several websites for ```<a>``` 
+Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape websites for ```<a>``` 
 tags that contain "John Waters":
   * [The Advocate](https://www.advocate.com/)
   * [Baltimore Magazine](https://www.baltimoremagazine.com/)
@@ -11,7 +11,7 @@ tags that contain "John Waters":
   * [IndieWire](https://www.indiewire.com/)
   * [The New York Times](https://www.nytimes.com/)
   * [Out](https://www.out.com/)
-  * [them.](https://www.them.us/)
+  * [them.](https://www.them.us/)...and many more!
   
 ## Instructions
   1. Clone this project
@@ -33,21 +33,26 @@ articles.forEach(site => {
       $('a:contains("<em>John Waters</em>")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        media.push({
-          title,
-          url: site.address,
-          source: site.name
-        })
+        if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && !title.includes('Accessories') && !title.includes('mediamax-width') && url) {
+          media.push({
+            title,
+            url: site.base ? site.base + url : url,
+            source: site.name
+          })
+        }
       })
+      
        // looking for anchor tags that contain "John Waters"
       $('a:contains("John Waters")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        media.push({
-          title,
-          url: site.address,
-          source: site.name
-        })
+        if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && url && title.length < 300 && url.length < 300) {
+          media.push({
+            title,
+            url: site.base ? site.base + url : url,
+            source: site.name
+          })
+        }
       })
     })
 })
