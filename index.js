@@ -31,11 +31,6 @@ const articles = [
     address: 'https://www.baltimoremagazine.com/?s=john+waters',
   },
   {
-    name: 'baltimoresun',
-    address: 'https://baltimoresun.search.yahoo.com/search?p=john+waters',
-    base: 'https://www.baltimoresun.com/'
-  },
-  {
     name: 'indiewire',
     address: 'https://www.indiewire.com/results/#?q=john%20waters',
     base: 'https://www.indiewire.com'
@@ -45,6 +40,66 @@ const articles = [
     address: 'https://www.them.us/search?q=JOHN+WATERS&sort=score+desc',
     base: 'https://www.them.us'
   },
+  {
+    name: 'dazed',
+    address: 'https://www.dazeddigital.com/tag/john-waters',
+    base: 'https://www.dazeddigital.com'
+  },
+  {
+    name: 'baltimorefishbowl',
+    address: 'https://baltimorefishbowl.com/?s=john+waters',
+    base: ''
+  },
+  {
+    name: 'theguardian',
+    address: 'https://www.theguardian.com/film/john-waters',
+    base: ''
+  },
+  {
+    name: 'entertainmentweekly',
+    address: 'https://ew.com/search/?q=john+waters',
+    base: ''
+  },
+  {
+    name: 'tvguide',
+    address: 'https://www.tvguide.com/s/john-waters/',
+    base: 'https://www.tvguide.com'
+  },
+  {
+    name: 'hightimes',
+    address: 'https://hightimes.com/?s=john+waters',
+    base: ''
+  },
+  {
+    name: 'monocle',
+    address: 'https://monocle.com/search/?keywords=john%20waters',
+    base: ''
+  },
+  {
+    name: 'juxtapoz',
+    address: 'https://www.juxtapoz.com/search/john%20waters/',
+    base: 'https://www.juxtapoz.com'
+  },
+  {
+    name: 'people',
+    address: 'https://people.com/search/?q=john+waters',
+    base: ''
+  },
+  {
+    name: 'instyle',
+    address: 'https://www.instyle.com/search?q=john+waters',
+    base: ''
+  },
+  {
+    name: 'closer',
+    address: 'https://www.closerweekly.com/search-results/?_s=john+waters',
+    base: ''
+  },
+  {
+    name: 'travel+leisure',
+    address: 'https://www.travelandleisure.com/search/?q=john%20waters',
+    base: ''
+  }
 ]
 
 const media = []
