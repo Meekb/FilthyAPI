@@ -4,14 +4,13 @@ A collection of articles about cult filmmaker and King of Filth, John Waters
 ## Overview
 Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape websites for ```<a>``` 
 tags that contain "John Waters":
-  * [The Advocate](https://www.advocate.com/)
-  * [Baltimore Magazine](https://www.baltimoremagazine.com/)
-  * [Baltimore Sun](https://www.baltimoresun.com/)
-  * [GO Magazine](http://gomag.com/)
-  * [IndieWire](https://www.indiewire.com/)
-  * [The New York Times](https://www.nytimes.com/)
-  * [Out](https://www.out.com/)
-  * [them.](https://www.them.us/)...and many more!
+  * [The Advocate](https://www.advocate.com)
+  * [Baltimore Magazine](https://www.baltimoremagazine.com)
+  * [Dazed](https://www.dazeddigital.com)
+  * [The Guardian](https://www.theguardian.com)
+  * [IndieWire](https://www.indiewire.com)
+  * [The New York Times](https://www.nytimes.com)
+  * [Out](https://www.out.com)...and many more!
   
 ## Instructions
   1. Clone this project
