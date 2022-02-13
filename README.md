@@ -32,8 +32,9 @@ articles.forEach(site => {
       $('a:contains("<em>John Waters</em>")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
+	// if we find tags that are not advertisements
         if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && !title.includes('Accessories') && !title.includes('mediamax-width') && url) {
-	// if we find tags that are not advertisements, push them into a madia array with defined key/values
+	// push them into a madia array with defined key/values
           media.push({
             title,
             url: site.base ? site.base + url : url,
@@ -46,9 +47,9 @@ articles.forEach(site => {
       $('a:contains("John Waters")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-	// if we find tags that are not advertisements, push them into a madia array
+	// if we find tags that are not advertisements
         if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && url && title.length < 300 && url.length < 300) {
-	// push the link into an array with defined key/values
+	// push them into a madia array with defined key/values
           media.push({
             title,
             url: site.base ? site.base + url : url,
@@ -104,7 +105,7 @@ axios.request(options).then(function (response) {
 [King of Filth API](https://john-waters-api.herokuapp.com/)
 
 ## API 
-[RapidAPI](https://rapidapi.com/bethm.meeker/api/filthyapi/)
+[FilthyAPI](https://rapidapi.com/bethm.meeker/api/filthyapi) can be found on [RapidAPI](https://rapidapi.com)'s API Hub
 
 ## Tech Stack
 <table>
