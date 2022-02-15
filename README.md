@@ -2,16 +2,15 @@
 A collection of articles about cult filmmaker and King of Filth, John Waters
 
 ## Overview
-Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape several websites for ```<a>``` 
+Using Node.js and Express, this basic API uses the npm package [cheerio](https://www.npmjs.com/package/cheerio) to scrape websites for ```<a>``` 
 tags that contain "John Waters":
-  * [The Advocate](https://www.advocate.com/)
-  * [Baltimore Magazine](https://www.baltimoremagazine.com/)
-  * [Baltimore Sun](https://www.baltimoresun.com/)
-  * [GO Magazine](http://gomag.com/)
-  * [IndieWire](https://www.indiewire.com/)
-  * [The New York Times](https://www.nytimes.com/)
-  * [Out](https://www.out.com/)
-  * [them.](https://www.them.us/)
+  * [The Advocate](https://www.advocate.com)
+  * [Baltimore Magazine](https://www.baltimoremagazine.com)
+  * [Dazed](https://www.dazeddigital.com)
+  * [The Guardian](https://www.theguardian.com)
+  * [IndieWire](https://www.indiewire.com)
+  * [The New York Times](https://www.nytimes.com)
+  * [Out](https://www.out.com)...and many more!
   
 ## Instructions
   1. Clone this project
@@ -33,21 +32,30 @@ articles.forEach(site => {
       $('a:contains("<em>John Waters</em>")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        media.push({
-          title,
-          url: site.address,
-          source: site.name
-        })
+	// if we find tags that are not advertisements
+        if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && !title.includes('Accessories') && !title.includes('mediamax-width') && url) {
+	// push them into a madia array with defined key/values
+          media.push({
+            title,
+            url: site.base ? site.base + url : url,
+            source: site.name
+          })
+        }
       })
+      
        // looking for anchor tags that contain "John Waters"
       $('a:contains("John Waters")', html).each(function() {
         const title = $(this).text().replace(/[^0-9a-z-A-Z ]/g, "").replace(/ +/, " ")
         const url = $(this).attr('href')
-        media.push({
-          title,
-          url: site.address,
-          source: site.name
-        })
+	// if we find tags that are not advertisements
+        if (title !== "" && title !== "_" && title !== 'acontains' && !title.includes('discount') && url && title.length < 300 && url.length < 300) {
+	// push them into a madia array with defined key/values
+          media.push({
+            title,
+            url: site.base ? site.base + url : url,
+            source: site.name
+          })
+        }
       })
     })
 })
@@ -97,7 +105,7 @@ axios.request(options).then(function (response) {
 [King of Filth API](https://john-waters-api.herokuapp.com/)
 
 ## API 
-[RapidAPI](https://rapidapi.com/bethm.meeker/api/filthyapi/)
+[FilthyAPI](https://rapidapi.com/bethm.meeker/api/filthyapi) can be found on [RapidAPI](https://rapidapi.com)'s API Hub
 
 ## Tech Stack
 <table>
