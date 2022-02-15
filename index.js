@@ -96,6 +96,11 @@ const articles = [
     base: ''
   },
   {
+    name: 'starobserver',
+    address: 'https://www.starobserver.com.au/?s=john+waters',
+    base: ''
+  },
+  {
     name: 'travel+leisure',
     address: 'https://www.travelandleisure.com/search/?q=john%20waters',
     base: ''
