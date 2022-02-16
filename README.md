@@ -105,7 +105,9 @@ axios.request(options).then(function (response) {
 [King of Filth API](https://john-waters-api.herokuapp.com/)
 
 ## API 
-[FilthyAPI](https://rapidapi.com/bethm.meeker/api/filthyapi) can be found on [RapidAPI](https://rapidapi.com)'s API Hub
+<a href="https://rapidapi.com/bethm.meeker/api/filthyapi" target="_blank">
+    <img src="https://storage.googleapis.com/rapidapi-documentation/connect-on-rapidapi-dark.png" width="215" alt="Connect on RapidAPI">
+</a>
 
 ## Tech Stack
 <table>
